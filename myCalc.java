@@ -8,7 +8,7 @@ public class myCalc implements ActionListener {
     JTextField textField;
     
     JButton[] numberButtons = new JButton[10];
-    JButton[] functionButtons = new JButton[18];
+    JButton[] functionButtons = new JButton[19];
 
     JButton addButton, subButton, mulButton, divButton;
     JButton decButton, equButton, delButton, clrButton, negButton, modButton,percButton,srtButton,lnButton,logButton,piButton,inButton,eButton,sinButton,cosButton;
@@ -68,10 +68,10 @@ public class myCalc implements ActionListener {
         functionButtons[15]= inButton;
         functionButtons[16]= eButton;
         functionButtons[17]= sinButton;
-        functionButtons[18]
+        functionButtons[18]= cosButton;
 
 
-        for (int i = 0; i < 18; i++) {
+        for (int i = 0; i < 19; i++) {
             functionButtons[i].addActionListener(this);
             functionButtons[i].setFont(myFont);
             functionButtons[i].setFocusable(false);
@@ -85,9 +85,11 @@ public class myCalc implements ActionListener {
         }
 
         delButton.setBounds(50, 400, 100, 50);
-        clrButton.setBounds(350, 400, 100, 50);
-        srtButton.setBounds(200,400,100,50);
+        clrButton.setBounds(250, 400, 100, 50);
+        srtButton.setBounds(150,400,100,50);
         sinButton.setBounds(50,450,100,50);
+        cosButton.setBounds(150,450,100,50);
+
         lnButton.setBounds(470,100,80,60);
         logButton.setBounds(470,180,80,60 );
         piButton.setBounds(470,260,80,60);
@@ -126,6 +128,7 @@ public class myCalc implements ActionListener {
         frame.add(srtButton);
         frame.add(clrButton);
         frame.add(sinButton);
+        frame.add(cosButton);
         frame.add(lnButton);
         frame.add(logButton);
         frame.add(piButton);
@@ -174,6 +177,10 @@ public class myCalc implements ActionListener {
         if (e.getSource() == sinButton) {
             double mysin = Double.parseDouble(textField.getText());
             textField.setText(String.valueOf(Math.sin(mysin)));
+        }
+        if (e.getSource() == cosButton) {
+            double mycos = Double.parseDouble(textField.getText());
+            textField.setText(String.valueOf(Math.cos(mycos)));
         }
         if (e.getSource() == piButton) {
             double mypi = Double.parseDouble(textField.getText());

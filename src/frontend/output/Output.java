@@ -63,7 +63,7 @@ public class Output extends JPanel {
 				}
 
 				Parser.clearOutput();
-
+				
 				if (e.getKeyChar() == KeyEvent.VK_ENTER && !enterPressed) {
 					System.out.println("Pressed");
 					enterPressed = true;

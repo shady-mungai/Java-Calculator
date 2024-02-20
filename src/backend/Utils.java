@@ -16,7 +16,7 @@ public class Utils {
 	public final static Character ALLOWED_KEYS[] = {
         '%', '+', '-', '/', 'x', '*', '(', ')', '^',
         '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
-        KeyEvent.VK_BACK_SPACE, KeyEvent.VK_ENTER
+        KeyEvent.VK_BACK_SPACE, KeyEvent.VK_ENTER,KeyEvent.VK_UP,KeyEvent.VK_DOWN
     };
 
     /**
